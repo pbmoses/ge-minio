@@ -36,16 +36,13 @@ buckets:
     policy: public
     purge: false
 
-  - name: enterprise-logs-tsdb
+  - name: enterprise-logs-chunks
     policy: public
     purge: false
   - name: enterprise-logs-admin
     policy: public
     purge: false
   - name: enterprise-logs-ruler
-    policy: public
-    purge: false
-  - name: enterprise-logs-alertmanager
     policy: public
     purge: false
 
