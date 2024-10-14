@@ -49,6 +49,19 @@ buckets:
     policy: public
     purge: false
 
+  - name: enterprise-traces-tsdb
+    policy: public
+    purge: false
+  - name: enterprise-traces-admin
+    policy: public
+    purge: false
+  - name: enterprise-traces-ruler
+    policy: public
+    purge: false
+  - name: enterprise-traces-alertmanager
+    policy: public
+    purge: false
+
 replicas: 4
 
 persistence:
