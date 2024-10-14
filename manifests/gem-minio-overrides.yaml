@@ -36,6 +36,19 @@ buckets:
     policy: public
     purge: false
 
+  - name: enterprise-logs-tsdb
+    policy: public
+    purge: false
+  - name: enterprise-logs-admin
+    policy: public
+    purge: false
+  - name: enterprise-logs-ruler
+    policy: public
+    purge: false
+  - name: enterprise-logs-alertmanager
+    policy: public
+    purge: false
+
 replicas: 4
 
 persistence:
