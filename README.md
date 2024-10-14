@@ -63,25 +63,23 @@ type: Opaque
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  labels:
-    app.kubernetes.io/instance: ge-application
   name: minio
   namespace: argocd
 spec:
   destination:
     namespace: metrics
     server: https://kubernetes.default.svc
-  project: default
   sources:
-  - chart: minio
-    helm:
-      valueFiles:
-      - $values/manifests/gem-minio-overrides.yaml
-    repoURL: https://charts.min.io/
-    targetRevision: 5.3.0
-  - ref: values
-    repoURL: https://github.com/pbmoses/ge-minio.git
-    targetRevision: HEAD
+    - repoURL: https://charts.min.io/
+      targetRevision: 5.3.0
+      chart: minio
+      helm:
+        valueFiles:
+          - $values/manifests/gem-minio-overrides.yaml
+    - repoURL: https://github.com/pbmoses/ge-minio.git
+      targetRevision: HEAD 
+      ref: values
+  project: default
 
 ```
 ### The overrides file
